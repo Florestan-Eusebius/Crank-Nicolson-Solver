@@ -3,18 +3,18 @@ The Crank Nicolson Solver to solve 1D time dependent Schrödinger equation.
 
 The main function is in `CrankNicolsonSolver.m`. The input parameters are
 
-- psi: function handle of variable x, initial wave function;
-- Vfunc: function handle of variable x and t, potential function;
-- x1: double, left position limit;
-- x2: double, right position limit;
-- NumX: int, spatial partition number;
-- tau: double, evolution time;
-- NumT: int, temporal partition number;
-- m: double, particle mass;
-- hbar: double, Planck constant;
-- fileID: string, file to store the data.
+- `psi`: function handle of variable (array) `x`, initial wave function;
+- `Vfunc`: function handle of variables (array) `x` and `t`, potential function;
+- `x1`: double, left position limit;
+- `x2`: double, right position limit;
+- `NumX`: int, spatial partition number;
+- `tau`: double, evolution time;
+- `NumT`: int, temporal partition number;
+- `m`: double, particle mass;
+- `hbar`: double, Planck constant;
+- `fileID`: string, file to store the data.
 
-The output of the function `CrankNicolsonSolver` is the final wave function as a NumX$\times$1 array. A file with name `fildID` is also generated to store the intermediate wave functions as a NumT$\times$NumX complex matrix.
+The output of the function `CrankNicolsonSolver` is the final wave function as a `NumX`$\times$1 array. A file with name `fildID` is also generated to store the intermediate wave functions as a `NumT`$\times$`NumX `complex matrix.
 
 Periodic boundary condition is assumed.
 
